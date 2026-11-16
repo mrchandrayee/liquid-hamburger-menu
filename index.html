@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>Liquid hamburger Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Liquid hamburger Menu</h1>
+
+    <section class="demo-frame" aria-label="Interactive liquid hamburger menu demo">
+      <div class="menu-scene">
+        <input class="menu-open" type="checkbox" id="menu-open" checked>
+        <label class="menu-open-button" for="menu-open" aria-label="Toggle navigation menu">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+
+        <a class="menu-item item-1" href="#home" aria-label="Home">🏠</a>
+        <a class="menu-item item-2" href="#profile" aria-label="Profile">🕵️</a>
+        <a class="menu-item item-3" href="#games" aria-label="Games">🎮</a>
+        <a class="menu-item item-4" href="#search" aria-label="Search">🔎</a>
+      </div>
+    </section>
+
+    <section class="code-panel" aria-label="CSS code shown in the recording">
+      <div class="editor-bar">
+        <span class="file-dot">#</span><strong>style.css</strong><span class="unsaved">●</span>
+        <span class="editor-spacer"></span><span class="editor-menu">Ⅱ&nbsp;&nbsp;•••</span>
+      </div>
+      <div class="editor-crumb">Sandbox&nbsp;›&nbsp; # style.css &nbsp;›&nbsp; .menu-open:checked ~ .item-4</div>
+      <pre><code><span class="comment">/* Calculating the exact positions for the droplets to shoot out
+   using a bouncy cubic-bezier curve */</span>
+
+<span class="selector">.menu-open:checked ~ .item-1</span> {
+  transition-duration: <span class="number">290ms</span>;
+  transform: translate3d(-100px, 0, 0);
+}
+
+<span class="selector">.menu-open:checked ~ .item-2</span> {
+  transition-duration: <span class="number">390ms</span>;
+  transform: translate3d(0, -100px, 0);
+}
+
+<span class="selector">.menu-open:checked ~ .item-3</span> {
+  transition-duration: <span class="number">490ms</span>;
+  transform: translate3d(100px, 0, 0);
+}
+
+<span class="selector">.menu-open:checked ~ .item-4</span> {
+  transition-duration: <span class="number">590ms</span>;
+  transform: translate3d(0, 100px, 0);
+}</code></pre>
+    </section>
+    <p class="hint">Click the blue center button to open and close the liquid menu</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
